@@ -17,26 +17,28 @@
         <div class="row">
             <div class="col">
 
-                <h1>PELICULAS</h1>
+                <h1>TIENDA PELICULAS</h1>
 
             </div>
         </div>
     </div>
 
+
+    <!-- Tabla carrito -->
     <div class="container">
 
         <div class="row justify-content-between">
-            <div class="col-4">
-                <h2>LISTADO</h2>
-            </div>
-            <div class="col-4">
+            <div class="col-4-end">
                 <h2>compras:</h2>
-                <table class="table table-success table-striped" id="tablaCompras">
+                <table class="table table-dark">
                     <thead>
                         <tr>
                             <th>id</th>
                             <th>Producto</th>
                             <th>precio </th>
+                            <th><button id="vaciarCarrito" type="button" class="btn btn-secondary btn-lg"><a
+                                        target>Vaciar
+                                        carrito</a></button></th>
                         </tr>
                     </thead>
 
@@ -46,26 +48,108 @@
 
                     </tbody>
 
+                    <tfoot>
+                        <td><strong>TOTAL</strong></td>
+                        <td></td>
+                        <td><strong><span id="compraTotal">0</span>$</strong></td>
+                        <td><button id="terminarPedido" type="button" class="btn btn-warning btn-lg"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal"><a target>Terminar
+                                    Pedido</a></button></td>
+                    </tfoot>
 
                 </table>
             </div>
         </div>
+    </div>
+    <!-- Tabla carrito -->
 
+
+
+    <!-- listado de peliculas -->
+    <div class="container">
         <div class="row mt-3 pb-3" id="listado">
-
+            <div class="col-4">
+                <h2>LISTADO</h2>
+            </div>
         </div>
 
         <div class="row mt-3 pb-3" id="listadoapi">
 
         </div>
 
+    </div>
+    <!-- listado de peliculas  -->
 
-        <script src=" //cdn.jsdelivr.net/npm/sweetalert2@11">
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-            crossorigin="anonymous"></script>
-        <script src="codigo.js"></script>
+
+    <!-- boton cargar mas peliculas -->
+    <div class="container">
+
+        <div class="cargar">
+
+            <button id="cargarPeliculas" type="button" class="btn btn-warning btn-lg"><a target>CARGAR MAS</a></button>
+
+        </div>
+
+    </div>
+    <!-- boton cargar mas peliculas -->
+
+
+
+    <!-- Modal 1-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Terminar Pedido</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="contenidoModal">
+
+
+                </div>
+                <div class="modal-footer" id="botonesCompra">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar Compra</button>
+                    <button id="confirmar" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#exampleModall"><a target>CONFIRMAR</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+
+
+    <!-- Modal 2-->
+    <div class="modal fade" id="exampleModall" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Terminar Pedidos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body" id="contenidoModall">
+
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar Compra</button>
+                    <button type="button" class="btn btn-primary" id="Terminar">TERMINAR PEDIDO</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 2-->
+
+
+    <!-- agregando SCRIPTS -->
+    <script src=" //cdn.jsdelivr.net/npm/sweetalert2@11">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="codigo.js"></script>
+    <!-- agregando SCRIPTS -->
 </body>
 
 </html>
